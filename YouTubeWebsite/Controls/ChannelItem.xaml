@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="YouTubeWebsite.Controls.ChannelItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YouTubeWebsite.Controls"
+             xmlns:controls="clr-namespace:YouTubeWebsite.ViewModels.Controls"
+             mc:Ignorable="d" 
+             Height="45" d:DesignWidth="600">
+    <Grid>
+        <Image Source="{Binding ChannelIcon, UpdateSourceTrigger=PropertyChanged}" Width="35" Height="35" HorizontalAlignment="Left" Margin="5 0 0 0" VerticalAlignment="Stretch"/>
+        <TextBlock Text="{Binding ChannelName, UpdateSourceTrigger=PropertyChanged}" Margin="45,5,105,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="Subscribe" HorizontalAlignment="Right" Margin="0,8,10,8" Width="90" FontSize="16"/>
+        <TextBlock Text="{Binding SubscribersCountFormatted, UpdateSourceTrigger=PropertyChanged}" Margin="45,0,105,3" VerticalAlignment="Bottom" FontSize="12"/>
+
+    </Grid>
+</UserControl>
